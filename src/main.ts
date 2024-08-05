@@ -1,12 +1,12 @@
 import { PageController } from '../src/controllers/page.controller.ts'
 
-const url = 'http://localhost:3000';
+const url = 'https://api-posts.codificando.xyz/auth/login'; //se declara la url de la api
 
-const loginForm = document.querySelector("#loginForm") as HTMLFormElement;
-const emailUser = document.querySelector("#emailUser") as HTMLInputElement;
+const loginForm = document.querySelector("#loginForm") as HTMLFormElement; //se declara el formulario de login
+const emailUser = document.querySelector("#emailUser") as HTMLInputElement; 
 const passwordUser = document.querySelector("#passwordUser") as HTMLInputElement;
 
-loginForm.addEventListener("submit", async (event : Event) => {
+loginForm.addEventListener("submit", async (event : Event) => { //se agrega un evento al formulario de login
   event.preventDefault();
 
   const user = {
@@ -16,13 +16,13 @@ loginForm.addEventListener("submit", async (event : Event) => {
 
  try{
   const pageControoller = new PageController(url);
-  const token = await pageControoller.login(user, 'login');
+  const token = await pageControoller.login(user, 'login'); //se envia la petición a la api
 
   console.log(token);
 
   sessionStorage.setItem('token', token.token);
 
-  const getToken = sessionStorage.getItem('token');
+  const getToken = sessionStorage.getItem('token'); //se obtiene el token de la sesión
 
   if (getToken === token.token) {
     window.location.href = './src/views/home.html'
@@ -30,7 +30,7 @@ loginForm.addEventListener("submit", async (event : Event) => {
   }
  }
  catch (error) {
-  console.log(error);
+  console.log(error); //se imprime el error
  }
 
 })

@@ -33,8 +33,6 @@ form.addEventListener('submit', async (event: Event) => {
             throw new Error(`Error: ${response.status} ${response.statusText}`); // Manejo de errores si la respuesta no es exitosa
         }
         const data = await response.json(); // Convertimos la respuesta a JSON
-
-// title, creationDate, creator,status, estimatedPublicacionDate, platform, approvalPercentage
         // Reseteamos el formulario
         form.reset();
 
