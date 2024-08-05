@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="/src/css/home.css">
+</head>
+<body>
+    <header>
+        <section class="headerTitle-container">
+          <h1 class="headerTitle">Data Leaker Gates</h1>
+        </section>
+        <nav>
+          <ul class="nav-list">
+            <li><a href="">Home</a></li>
+            <button id="logout-button">Salir</button>
+            <button id="newpost-button">New Post</button>
+          </ul>
+        </nav>
+      </header>
+      
+      <main class="addPost-main">
+        <h2 class="addPost-title">Agrega un nuevo post</h2>
+  
+        <section class="form-container">
+          <form id="addPost-form" action="">
+             <!-- Input oculto con el ID para actualizar -->
+            <input 
+              type="hidden" 
+              id="post-id" 
+              value=""
+            />
+
+            <input
+              type="text"
+              class="addpost-input"
+              id="new-post"
+              placeholder="Nombre del post"
+            />
+            <input
+              type="text"
+              class="datecreation-input"
+              id="new-datecreation"
+              placeholder="Fecha de creación"
+            />
+            <input
+            type="text"
+            class="dateestimated-input"
+            id="new-dateestimated"
+            placeholder="Fecha estimada"
+          />
+            <input
+              type="text"
+              class="addplataform-input"
+              id="new-plataform"
+              placeholder="Plataforma"
+            />
+            <textarea
+              class="addpost-textarea"
+              id="newpost-description"
+              placeholder="Descripción"
+            ></textarea>
+            <div class="button-container">
+              <button type="submit" class="addpost-button">Agregar</button>
+            </div>
+          </form>
+        </section>
+
+        <!-- Contenedor donde se agregará las cards de las ciudades -->
+        <section id="post-section">
+
+        </section>
+      </main>
+</body>
+</html>
