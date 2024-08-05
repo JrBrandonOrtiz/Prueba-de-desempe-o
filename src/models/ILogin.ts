@@ -1,4 +1,4 @@
-export interface ILogin {
+export interface ILogin { //se declaran las interfaces que se utilizarán en el componente
     email:    string;
     password: string;
 }
